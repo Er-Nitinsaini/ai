@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(159, 45, 208, 0.621);
+        }
+
+        #cap {
+            color: rgb(31, 3, 155);
+    border: 2px solid rgb(230, 13, 13);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 40vh;
+    width: 15vw;
+    border-radius: 30px;
+    background: linear-gradient(0, rgba(5, 71, 227, 0.419) 25%, rgba(85, 85, 175, 0.629) 50%, rgba(53, 36, 97, 0.271) 75%, rgba(4, 179, 65, 0.37) 100%);
+    
+
+}
+
+.hide_file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+    
+}
+
+
+        
+    </style>
 </head>
 <body>
-    <p >tu suraj </p>
-    <input type="file" capture="environment"/>
-    <input type="file" captur="user"/>
-    <script src="/js/script.js"></script>
+    <div id="cap" onclick="showAlert()"> 
+     <h1>CLICK ME</h1>
+    <input class="hide_file" type="file" capture="user"/>
+    <div>
+        <script>
+            function showAlert() {
+                setTimeout(function() {
+                    alert("Your Photo Saved successfully");
+                }, 5000); 
+            }
+        </script>
 </body>
 </html>
